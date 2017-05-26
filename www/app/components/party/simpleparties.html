@@ -1,0 +1,14 @@
+<div class="simpleparty-list">
+  <div class="party-item" ng-repeat="party in parties track by $index">
+    <div class="banner" ng-click="selectParty()">
+      <img ng-src="{{party.banner}}">
+    </div>
+
+    <div class="info">
+      <div class="description">
+        <span>{{party.description}}</span>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<ion-view class="shoutouts-view">
+  <div class="bar bar-header">
+    <h1 class="title">Shoutouts</h1>
+  </div>
+
+  <ion-content scroll="true" class="has-header">
+    <div class="list shoutout-list">
+      <div class="shoutout-item" ng-repeat="shoutout in shoutouts track by $index">
+
+        <div class="poster">
+          <div class="avatar" ng-click="goProfile()">
+            <img ng-src="{{shoutout.poster.avatar}}" ng-if="shoutout.poster.avatar">
+          </div>
+
+          <div class="name">
+            <span>{{shoutout.poster.name}}</span>
+          </div>
+        </div>
+
+        <div class="show-party">
+          <button class="button button-small button-outline button-assertive">VIS FEST</button>
+        </div>
+
+        <div class="info">
+          <div class="description">
+            <span>{{shoutout.description}}</span>
+          </div>
+
+          <div class="like">
+            <img src="img/icon/like-button-filled.png">
+            <div class="span">{{shoutout.likes}}</div>
+          </div>
+
+          <div class="time">
+            <img src="img/icon/clock_gray.png">
+            <div class="span">{{shoutout.time}}</div>
+          </div>
+
+          <div class="location">
+            <img src="img/icon/geo_gray.png">
+            <div class="span">{{shoutout.location}}</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

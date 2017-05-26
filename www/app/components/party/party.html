@@ -1,0 +1,101 @@
+<ion-view class="party-view">
+  <div class="bar bar-header">
+    <button class="button button-clear button-assertive icon ion-arrow-left-c" ng-click="$ionicGoBack()"></button>
+    <h1 class="title">Fest</h1>
+  </div>
+
+  <ion-content scroll="true" class="has-header has-footer">
+    <div class="party">
+      <div class="banner">
+        <img ng-src="{{party.banner}}">
+      </div>
+
+      <div class="poster">
+        <div class="avatar" ng-click="goProfile()">
+          <img ng-src="{{party.poster.avatar}}" ng-if="party.poster.avatar">
+        </div>
+
+        <div class="name">
+          <span>{{party.poster.name}}</span>
+        </div>
+      </div>
+
+      <div class="cancel">
+        <button class="button button-small button-assertive" ng-click="joinParty()">BLI MED</button>
+      </div>
+
+      <div class="info">
+        <div class="description">
+          <span>{{party.description}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="party-info">
+
+      <div class="info-item">
+        <div class="item-header guests">
+          <span class="title">Gjester</span>
+        </div>
+        <div class="item-content guests">
+          <div class="guest" ng-repeat="guest in party.guests track by $index">
+            <img ng-src="{{guest.avatar}}">
+          </div>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="item-header distance">
+          <span class="title">Avstand</span>
+        </div>
+        <div class="item-content distance">
+          <span class="content">{{party.distance}}</span>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="item-header time">
+          <span class="title">Tid</span>
+        </div>
+        <div class="item-content time">
+          <span class="content">{{party.time}}</span>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="item-header date">
+          <span class="title">Dato</span>
+        </div>
+        <div class="item-content date">
+          <span class="content">{{party.date}}</span>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="item-header house">
+          <span class="title">Husregler</span>
+        </div>
+        <div class="item-content house">
+          <span class="content" ng-repeat="rule in party.house">{{rule}}</span>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="item-header premiers">
+          <span class="title">Premier</span>
+        </div>
+        <div class="item-content premiers">
+          <div class="premier" ng-repeat="premier in party.premiers track by $index">
+            <img ng-src="{{premier.mark}}">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </ion-content>
+
+  <div class="footer">
+    <button class="button button-full button-assertive" ng-click="joinParty()">BLI MED</button>
+  </div>
+
+</ion-view>

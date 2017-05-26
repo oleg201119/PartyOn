@@ -1,0 +1,100 @@
+.filter-view {
+
+  .filter-item {
+    .title {
+      padding: 10px;
+    }
+
+    .content {
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      padding: 10px;
+    }
+  }
+
+  // Calendar
+  .brightness {-webkit-filter: brightness(0.25); filter: brightness(0.25);}
+
+  .flex-calendar {
+      .month {
+        background-color: #f1f1f1;
+
+        .label {
+          color: $dark;
+        }
+      }
+
+      .week, .days {
+        background-color: transparent;
+      }
+
+      .days {
+        .day {
+          background-color: transparent;
+          border: none;
+
+          &.out {
+            background-color: transparent;
+          }
+
+          &.selected .number {
+            background-color: $assertive;
+          }
+
+          &.disabled {
+            .number {
+              background-color: transparent;
+              background-image: none;
+            }
+          }
+        }
+      }
+    }
+
+    ui-multi-range {
+      @include flex(1);
+      position: relative;
+      height: 50px;
+      input[type=range] {
+          position: absolute;
+          display: block;
+          width: 100%;
+          margin: 0;
+          padding: 0 2px;
+          overflow: hidden;
+          border: 0;
+          border-radius: 1px;
+          outline: none;
+          pointer-events: none;
+
+          &:active,
+          &:focus {
+              outline: none;
+          }
+
+          &::-webkit-slider-thumb {
+              position: relative;
+              cursor: pointer;
+              pointer-events: all;
+              &::before {
+                  content: ' ';
+                  display: block;
+                  position: absolute;
+                  top: 13px;
+                  left: 100%;
+                  width: 2000px;
+                  height: 2px;
+              }
+          }
+
+          &:nth-child(2) {
+              background: none;
+
+              &::-webkit-slider-thumb::before {
+                  background-color: $range-default-track-bg;
+              }
+          }
+      }
+  }
+
+}

@@ -1,0 +1,37 @@
+.premier-view
+{
+  .premier-list
+  {
+    width: 100%;
+    padding: 16px;
+
+    .premier-item
+    {
+      width: 25%;
+      margin-bottom: 20px;
+      float: left;
+      text-align: center;
+
+      img
+      {
+        width: 40px;
+        height: 40px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .description
+      {
+        width: 100%;
+        margin-top: 10px;
+
+        p
+        {
+          font-size: 11px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}

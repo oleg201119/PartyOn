@@ -1,0 +1,14 @@
+.create-menu {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  height: 67px;
+  background-color: $assertive;
+  display: block;
+  color: white;
+  z-index: 10;
+
+  .button {
+    margin: 0px;
+  }
+}

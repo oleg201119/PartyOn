@@ -1,0 +1,16 @@
+<ion-view class="premier-view">
+  <div class="bar bar-header">
+    <button class="button button-clear button-assertive icon ion-arrow-left-c" ng-click="$ionicGoBack()"></button>
+    <h1 class="title">Mine premier</h1>
+  </div>
+  <ion-content scroll="true" class="has-header">
+    <div class="premier-list">
+      <div class="premier-item" ng-repeat="premier in premiers track by $index">
+        <img ng-src="{{premier.mark}}">
+        <div class="description">
+          <p ng-bind-html="premier.description"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

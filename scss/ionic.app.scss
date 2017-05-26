@@ -1,0 +1,41 @@
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ff0055 !default;
+$royal:                           #886aea !default;
+$dark:                            #9b9b9b !default;
+
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+// Variables
+@import "scss/common.variable";
+@import "scss/auth/auth.variable";
+@import "scss/chat/chat.variable";
+
+// Styles
+@import "scss/common.style";
+@import "scss/base/create-menu.style";
+@import "scss/base/party-create.style";
+@import "scss/base/shoutout-create.style";
+@import "scss/auth/login.style";
+@import "scss/feed/feed.style";
+@import "scss/notification/notification.style";
+@import "scss/profile/profile.style";
+@import "scss/profile/myprofile.style";
+@import "scss/profile/editprofile.style";
+@import "scss/profile/premier.style";
+@import "scss/profile/vote.style";
+@import "scss/chat/chat.style";
+@import "scss/party/party.style";
+@import "scss/party/simpleparty.style";
+@import "scss/filter/filter.style";
+@import "scss/inbox/inbox.style";
+@import "scss/shoutout/shoutout.style";

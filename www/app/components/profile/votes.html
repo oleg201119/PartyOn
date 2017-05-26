@@ -1,0 +1,51 @@
+<ion-view class="votes-view">
+  <div class="bar bar-header">
+    <button class="button button-clear button-assertive icon ion-arrow-left-c" ng-click="$ionicGoBack()"></button>
+    <h1 class="title">Mine Stemmer</h1>
+  </div>
+
+  <ion-content scroll="true" class="has-header">
+    <div class="list vote-list">
+      <div class="item vote-item" ng-repeat="vote in votes track by $index">
+
+        <div class="poster">
+          <div class="avatar" ng-click="goProfile()">
+            <img ng-src="{{vote.poster.avatar}}" ng-if="vote.poster.avatar">
+          </div>
+
+          <div class="name">
+            <span>{{vote.poster.name}}</span>
+          </div>
+        </div>
+
+        <div class="show-party">
+          <button class="button button-small button-outline button-assertive">VIS FEST</button>
+        </div>
+
+        <div class="info">
+          <div class="description">
+            <span>{{vote.description}}</span>
+          </div>
+
+          <div class="like">
+            <img src="img/icon/like-button-filled.png">
+            <div class="span">{{vote.likes}}</div>
+          </div>
+
+          <div class="time">
+            <img src="img/icon/clock_gray.png">
+            <div class="span">{{vote.time}}</div>
+          </div>
+
+          <div class="location">
+            <img src="img/icon/geo_gray.png">
+            <div class="span">{{vote.location}}</div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,39 @@
+<ion-view class="editprofile-view">
+  <div class="bar bar-header">
+    <button class="button button-clear button-assertive icon ion-arrow-left-c" ng-click="$ionicGoBack()"></button>
+    <h1 class="title">Rediger profil</h1>
+    <button class="button button-clear button-assertive" ng-click="saveProfile(); $ionicGoBack();">Ferdig</button>
+  </div>
+
+  <ion-content scroll="true" class="has-header">
+    <div class="account">
+      <div class="name">
+        <p>{{account.name}}</p>
+      </div>
+      <div class="avatar">
+        <img ng-src="{{account.avatar}}">
+      </div>
+      <div class="edit-avatar">
+        <button class="button button-clear button-assertive">Endre profibilde</button>
+      </div>
+    </div>
+    <div class="list">
+      <label class="item item-input">
+        <i class="icon icon-date-red"></i>
+        <span class="input-label">Birthday</span>
+        <input type="date" style="text-align: right">
+      </label>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          <i class="icon icon-sex-red"></i>
+          Sex
+        </div>
+        <select>
+          <option>Female</option>
+          <option selected>Male</option>
+        </select>
+      </label>
+    </div>
+  </ion-content>
+</ion-view>

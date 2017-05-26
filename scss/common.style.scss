@@ -1,0 +1,224 @@
+// Tab bar items
+.tab-item
+{
+  .icon
+  {
+    margin-top: 10px;
+    width: 28px;
+    height: 24px;
+    background-repeat: no-repeat;
+
+    &.icon-home-off
+    {
+      background-image: url('../img/tab/home.png');
+    }
+
+    &.icon-home-on
+    {
+      background-image: url('../img/tab/home-active.png');
+    }
+
+    &.icon-notification-off
+    {
+      background-image: url('../img/tab/notifications.png');
+    }
+
+    &.icon-notification-on
+    {
+      background-image: url('../img/tab/notifications-active.png');
+    }
+
+    &.icon-shoutout-off
+    {
+      background-image: url('../img/tab/shoutout.png');
+    }
+
+    &.icon-shoutout-on
+    {
+      background-image: url('../img/tab/shoutout-active.png');
+    }
+
+    &.icon-create-off
+    {
+      background-image: url('../img/tab/create-close.png');
+    }
+
+    &.icon-create-on
+    {
+      background-image: url('../img/tab/create-open.png');
+    }
+
+    &.icon-inbox-off
+    {
+      background-image: url('../img/tab/inbox.png');
+    }
+
+    &.icon-inbox-on
+    {
+      background-image: url('../img/tab/inbox-active.png');
+    }
+
+    &.icon-profile-off
+    {
+      background-image: url('../img/tab/profile.png');
+    }
+
+    &.icon-profile-on
+    {
+      background-image: url('../img/tab/profile-active.png');
+    }
+  }
+}
+
+.icon
+{
+  width: 28px;
+  height: 24px;
+  background-repeat: no-repeat;
+
+  &.icon-chevron
+  {
+    background-image: url('../img/icon/chevron.png');
+    display: inline-block;
+    vertical-align: middle !important;
+  }
+
+  &.icon-profile
+  {
+    background-image: url('../img/icon/profile-blue.png');
+    display: inline-block;
+    vertical-align: middle !important;
+  }
+
+  &.icon-notification
+  {
+    background-image: url('../img/icon/notifications.png');
+    display: inline-block;
+    vertical-align: middle !important;
+  }
+
+  &.icon-shoutout
+  {
+    background-image: url('../img/icon/shoutout.png');
+    display: inline-block;
+    vertical-align: middle !important;
+  }
+
+  &.icon-cup
+  {
+    background-image: url('../img/icon/cup_white.png');
+    display: inline-block;
+    vertical-align: middle !important;
+  }
+
+  &.icon-cup-red
+  {
+    background-image: url('../img/icon/cup.png');
+    display: inline-block;
+    vertical-align: middle !important;
+  }
+
+  &.icon-date-red
+  {
+    background-image: url('../img/icon/date_red.png');
+    display: inline-block;
+    vertical-align: middle !important;
+    height: 18px;
+  }
+
+  &.icon-sex-red
+  {
+    background-image: url('../img/icon/sex_red.png');
+    display: inline-block;
+    vertical-align: middle !important;
+    height: 18px;
+  }
+
+  &.icon-key
+  {
+    background-image: url('../img/icon/key.png');
+    display: inline-block;
+    vertical-align: middle !important;
+  }
+
+  &.icon-plus-one
+  {
+    background-image: url('../img/icon/plus-one.png');
+    display: inline-block;
+    vertical-align: middle !important;
+  }
+
+  &.icon-star
+  {
+    background-image: url('../img/icon/star-yellow.png');
+    display: inline-block;
+    vertical-align: middle !important;
+  }
+}
+
+.premier-icon
+{
+    width: 40px;
+    height: 40px;
+}
+
+.short-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// footer
+.footer {
+  position: absolute;
+  bottom: 0px;
+
+  width: 100%;
+
+  .button {
+    margin: 0px;
+  }
+}
+
+// Google map
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+// Calendar
+.flex-calendar {
+  .month {
+    background-color: #f1f1f1;
+
+    .label {
+      color: $dark;
+    }
+  }
+
+  .week, .days {
+    background-color: transparent;
+  }
+
+  .days {
+    .day {
+      background-color: transparent;
+      border: none;
+
+      &.out {
+        background-color: transparent;
+      }
+
+      &.selected .number {
+        background-color: $assertive;
+      }
+
+      &.disabled {
+        .number {
+          background-color: transparent;
+          background-image: none;
+        }
+      }
+    }
+  }
+}

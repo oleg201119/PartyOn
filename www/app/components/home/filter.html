@@ -1,0 +1,76 @@
+<ion-view class="filter-view">
+  <div class="bar bar-header">
+    <button class="button button-clear button-assertive icon ion-arrow-left-c" ng-click="$ionicGoBack()"></button>
+    <h1 class="title">Filter</h1>
+    <button class="button button-clear button-assertive">Vis treff</button>
+  </div>
+
+  <ion-content scroll="true" class="has-header">
+
+    <div class="filter-item">
+      <div class="title">
+        <span>Jeg vil feste med</span>
+      </div>
+      <div class="content">
+        <div class="button-bar">
+          <button class="button button-small button-assertive">Jenter</button>
+          <button class="button button-small button-outline button-assertive">Gutter</button>
+          <button class="button button-small button-outline button-assertive">Begge</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-item">
+      <div class="title">
+        <span>Avstand</span>
+      </div>
+      <div class="content">
+        <div class=range-label>
+          <span class="left">Maksimal avstand</span>
+          <span class="right" style="float:right">100 km</span>
+        </div>
+        <div class="range">
+          <input type="range" name="distance">
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-item">
+      <div class="title">
+        <span>Alder</span>
+      </div>
+      <div class="content">
+        <div class="range">
+          <div class="range-label">{{age.from}}</div>
+          <ui-multi-range ng-step="1" ng-min="ageMin" ng-max="ageMax" ng-model-min="age.from" ng-model-max="age.to" ng-change-min="minAgeChanged()" ng-change-max="maxAgeChanged()"></ui-multi-range>
+          <div class="range-label">{{age.to}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-item">
+      <div class="title">
+        <span>Tid</span>
+      </div>
+      <div class="content">
+        <div class="range">
+          <div class="range-label">{{time.from}}</div>
+          <ui-multi-range ng-step="1" ng-min="timeMin" ng-max="timeMax" ng-model-min="time.from" ng-model-max="time.to" ng-change-min="minTimeChanged()" ng-change-max="maxTimeChanged()"></ui-multi-range>
+          <div class="range-label">{{time.to}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-item">
+      <div class="title">
+        <span>Dato</span>
+      </div>
+      <div class="content">
+        <div class="calendar">
+            <flex-calendar options="options" events="events"></flex-calendar>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

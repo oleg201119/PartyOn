@@ -1,0 +1,50 @@
+<div class="create-menu" ng-show="openCreateMenu">
+  <div class="row">
+    <div class="col col-center" style="border-right: 1px solid white;">
+      <button class="button button-full button-clear button-light" ng-click="createShoutout();">
+        <i class="icon icon-shoutout"></i>
+        Ny shoutout
+      </button>
+    </div>
+    <div class="col col-center" style="border-left: 1px solid white;">
+      <button class="button button-full button-clear button-light" ng-click="createParty();">
+        <i class="icon icon-cup"></i>
+        Ny fest
+      </button>
+    </div>
+  </div>
+</div>
+<ion-tabs class="tabs-icon-only tabs-color-assertive">
+
+  <!-- Home Tab -->
+  <ion-tab icon-off="icon-home-off" icon-on="icon-home-on" href="#/app/feed">
+    <ion-nav-view name="tab-home"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Notification Tab -->
+  <!--
+  <ion-tab icon-off="icon-notification-off" icon-on="icon-notification-on" href="#/app/notification">
+    <ion-nav-view name="tab-notification"></ion-nav-view>
+  </ion-tab>
+  -->
+
+  <!-- Shoutout Tab -->
+  <ion-tab icon-off="icon-shoutout-off" icon-on="icon-shoutout-on" href="#/app/shoutout">
+    <ion-nav-view name="tab-shoutout"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Create toggle button -->
+  <ion-tab icon="{{createIcon}}" xicon-off="icon-create-off" xicon-on="icon-create-on" xhref="#/app/creation" ng-click="clickCreateButton()">
+  </ion-tab>
+
+  <!-- Inbox Tab -->
+  <ion-tab icon-off="icon-inbox-off" icon-on="icon-inbox-on" href="#/app/inbox">
+    <ion-nav-view name="tab-inbox"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Profile Tab -->
+  <ion-tab icon-off="icon-profile-off" icon-on="icon-profile-on" href="#/app/profile">
+    <ion-nav-view name="tab-profile"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>

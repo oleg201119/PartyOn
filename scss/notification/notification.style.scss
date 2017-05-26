@@ -1,0 +1,35 @@
+.notification-view
+{
+  .item
+  {
+    p
+    {
+      white-space: normal !important;
+      margin-right: 80px;
+      height: 40px;
+    }
+
+    .button
+    {
+      position: absolute;
+      top: 20px;
+      right: 16px;
+      width: 70px;
+    }
+
+    &.accepted
+    {
+      background-color: $assertive;
+      p
+      {
+        color: $light;
+      }
+
+      button
+      {
+        background-color: $light;
+        border-color: $light;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<ion-view class="feed-view">
+  <div class="bar bar-header">
+    <h1 class="title">Bergen</h1>
+    <button class="button button-clear button-assertive" ng-click="goFilter()">Filter</button>
+  </div>
+
+  <ion-content scroll="true" class="has-header">
+    <div ng-include="'app/components/party/parties.html'"></div>
+  </ion-content>
+</ion-view>

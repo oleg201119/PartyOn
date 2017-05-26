@@ -1,0 +1,25 @@
+<ion-view class="inbox-view">
+  <div class="bar bar-header">
+    <h1 class="title">Meldinger</h1>
+  </div>
+  <div class="bar bar-subheader item-input-inset">
+    <label class=" item-input-wrapper">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="search" placeholder="Search" ng-change="search()" ng-model="keyword.text">
+    </label>
+  </div>
+
+  <ion-content scroll="true" class="has-header has-subheader">
+    <div class="list message-list">
+      <a class="item item-avatar item-icon-right" ng-repeat="message in messages | filter:keyword.text" ng-click="doChat()">
+        <img ng-src="{{message.poster.avatar}}">
+        <span class="item-note">
+          {{message.date}}
+        </span>
+        <h2>{{message.poster.name}}</h2>
+        <p>{{message.description}}</p>
+        <i class="icon icon-chevron"></i>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

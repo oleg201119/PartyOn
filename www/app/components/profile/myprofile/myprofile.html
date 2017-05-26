@@ -1,0 +1,115 @@
+<ion-view class="myprofile-view">
+  <div class="bar bar-header">
+    <button class="button button-clear button-assertive icon ion-arrow-left-c" ng-click="$ionicGoBack()"></button>
+    <h1 class="title">Min profil</h1>
+  </div>
+
+  <ion-content scroll="true" class="has-header">
+    <div class="myaccount">
+      <div class="account">
+        <div class="avatar">
+          <img ng-src="{{account.avatar}}" ng-if="account.avatar">
+        </div>
+
+        <div class="name">
+          <span>{{account.name}}</span>
+        </div>
+      </div>
+
+      <div class="rediger">
+        <button class="button button-small button-outline button-dark" ng-click="editProfile()">REDIGER</button>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="item-header party">
+        <span class="title">Pagaende fest</span>
+      </div>
+    </div>
+
+    <div class="party-list">
+      <div class="party-item" ng-repeat="party in newParties track by $index">
+        <div class="banner" ng-click="goParty()">
+          <img ng-src="{{party.banner}}">
+        </div>
+
+        <div class="poster">
+          <div class="avatar" ng-click="goChat()">
+            <img ng-src="{{party.poster.avatar}}" ng-if="party.poster.avatar">
+          </div>
+
+          <div class="name" ng-click="goChat()">
+            <span>{{party.poster.name}}</span>
+          </div>
+        </div>
+
+        <div class="rediger">
+          <button class="button button-small button-outline button-light">REDIGER</button>
+        </div>
+
+        <div class="info">
+          <div class="time">
+            <img src="img/icon/clock_white.png">
+            <div class="span">{{party.time}}</div>
+          </div>
+
+          <div class="location">
+            <img src="img/icon/geo_white.png">
+            <div class="span">{{party.location}}</div>
+          </div>
+
+          <div class="description">
+            <span>{{party.description}}</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="item-header party">
+        <span class="title">Tidligere fest</span>
+      </div>
+    </div>
+
+    <div class="party-list">
+      <div class="party-item" ng-repeat="party in oldParties track by $index">
+        <div class="banner" ng-click="goParty()">
+          <img ng-src="{{party.banner}}">
+        </div>
+
+        <div class="poster">
+          <div class="avatar" ng-click="goChat()">
+            <img ng-src="{{party.poster.avatar}}" ng-if="party.poster.avatar">
+          </div>
+
+          <div class="name" ng-click="goChat()">
+            <span>{{party.poster.name}}</span>
+          </div>
+        </div>
+
+        <div class="rediger">
+          <button class="button button-small button-outline button-light">REDIGER</button>
+        </div>
+
+        <div class="info">
+          <div class="time">
+            <img src="img/icon/clock_white.png">
+            <div class="span">{{party.time}}</div>
+          </div>
+
+          <div class="location">
+            <img src="img/icon/geo_white.png">
+            <div class="span">{{party.location}}</div>
+          </div>
+
+          <div class="description">
+            <span>{{party.description}}</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,16 @@
+<ion-view class="notification-view">
+  <div class="bar bar-header">
+    <button class="button button-clear button-assertive icon ion-arrow-left-c" ng-click="$ionicGoBack()"></button>
+    <h1 class="title">Varsler</h1>
+  </div>
+
+  <ion-content scroll="true" class="has-header">
+    <div class="list notification-list">
+      <div class="item item-avatar notification-item" xng-class="notification.invitation ? 'invitation': 'accepted'" ng-repeat="notification in notifications track by $index">
+        <img ng-src="{{notification.poster.avatar}}">
+        <p>{{notification.description}}</p>
+        <button class="button button-small button-outline button-assertive">{{notification.invitation ? 'VIS S/O' : 'VIS FEST'}}</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

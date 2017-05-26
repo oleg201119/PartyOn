@@ -1,0 +1,96 @@
+<ion-modal-view class="party-create">
+  <ion-header-bar>
+    <h1 class="title">Fest</h1>
+    <div class="buttons">
+      <button class="button button-clear button-assertive" ng-click="publish()">Publiser</button>
+    </div>
+  </ion-header-bar>
+
+  <ion-content scroll="true" class="has-header">
+    <div class="banner" ng-click="editBanner()">
+      <img ng-src="{{party.banner}}">
+    </div>
+
+    <div class="info-item">
+      <div class="item-header party">
+        <span class="title">Tittel</span>
+      </div>
+      <div class="item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="">
+        </label>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="item-header hammer">
+        <span class="title">Husregler</span>
+      </div>
+      <div class="item-input-inset">
+        <label class="item-input-wrapper">
+          <textarea placeholder=""></textarea>
+        </label>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="item-header sex-gray">
+        <span class="title">Kjonn</span>
+      </div>
+      <div class="button-bar">
+        <button class="button button-small button-assertive" ng-class="{'button-outline' : party.sex != 0}" ng-click="setSex(0)">Jenter</button>
+        <button class="button button-small button-assertive" ng-class="{'button-outline' : party.sex != 1}" ng-click="setSex(1)">Gutter</button>
+        <button class="button button-small button-assertive" ng-class="{'button-outline' : party.sex != 2}" ng-click="setSex(2)">Begge</button>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="item-header geo-gray">
+        <span class="title">Plass</span>
+      </div>
+      <div class="map">
+        <div id="map" data-tap-disabled="true"></div>
+      </div>
+    </div>
+
+    <div class="filter-item">
+      <div class="title">
+        <span>Alder</span>
+      </div>
+      <div class="content">
+        <div class="range">
+          <div class="range-label">{{party.filter.age.from}}</div>
+          <ui-multi-range ng-step="1" ng-min="party.filter.age.min" ng-max="party.filter.age.max" ng-model-min="party.filter.age.from" ng-model-max="party.filter.age.to" ng-change-min="minAgeChanged()" ng-change-max="maxAgeChanged()"></ui-multi-range>
+          <div class="range-label">{{party.filter.age.to}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-item">
+      <div class="title">
+        <span>Tid</span>
+      </div>
+      <div class="content">
+        <div class="range">
+          <div class="range-label">{{time.from}}</div>
+          <ui-multi-range ng-step="1" ng-min="timeMin" ng-max="timeMax" ng-model-min="time.from" ng-model-max="time.to" ng-change-min="minTimeChanged()" ng-change-max="maxTimeChanged()"></ui-multi-range>
+          <div class="range-label">{{time.to}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-item">
+      <div class="title">
+        <span>Dato</span>
+      </div>
+      <div class="content">
+        <div class="calendar">
+            <flex-calendar options="options" events="events"></flex-calendar>
+        </div>
+      </div>
+    </div>
+
+    <button class="button button-full button-assertive" ng-click="publish()">PUBLISER</button>
+  </ion-content>
+
+</ion-modal-view>
