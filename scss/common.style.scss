@@ -154,6 +154,14 @@
     display: inline-block;
     vertical-align: middle !important;
   }
+
+  &.icon-profile-red
+  {
+    background-image: url('../img/icon/profile-red.png');
+    display: inline-block;
+    vertical-align: middle !important;
+    height: 21px;
+  }
 }
 
 .premier-icon
@@ -221,4 +229,38 @@
       }
     }
   }
+}
+
+.rzslider {
+  .rz-pointer {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+
+    -webkit-box-shadow: 0 2px 12px -2px #666;
+	   -moz-box-shadow: 0 2px 12px -2px #666;
+	        box-shadow: 0 2px 12px -2px #666;
+
+    &:hover:after {
+      background-color: transparent;
+    }
+
+    &.rz-active:after {
+      background-color: transparent;
+    }
+
+    &:after {
+      background-color: transparent;
+    }
+  }
+
+  .rz-selection {
+    background-color: $assertive;
+    height: 2px;
+  }
+
+  .rz-bar {
+    height: 2px;
+  }
+
 }

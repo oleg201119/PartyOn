@@ -9879,6 +9879,11 @@ a.button {
     background-image: url("../img/icon/star-yellow.png");
     display: inline-block;
     vertical-align: middle !important; }
+  .icon.icon-profile-red {
+    background-image: url("../img/icon/profile-red.png");
+    display: inline-block;
+    vertical-align: middle !important;
+    height: 21px; }
 
 .premier-icon {
   width: 40px;
@@ -9919,6 +9924,27 @@ a.button {
     background-color: transparent;
     background-image: none; }
 
+.rzslider .rz-pointer {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 12px -2px #666;
+  -moz-box-shadow: 0 2px 12px -2px #666;
+  box-shadow: 0 2px 12px -2px #666; }
+  .rzslider .rz-pointer:hover:after {
+    background-color: transparent; }
+  .rzslider .rz-pointer.rz-active:after {
+    background-color: transparent; }
+  .rzslider .rz-pointer:after {
+    background-color: transparent; }
+
+.rzslider .rz-selection {
+  background-color: #ff0055;
+  height: 2px; }
+
+.rzslider .rz-bar {
+  height: 2px; }
+
 .create-menu {
   position: absolute;
   bottom: 50px;
@@ -9933,8 +9959,13 @@ a.button {
 
 .party-create .banner {
   width: 100%;
-  height: 100%;
-  margin-bottom: 10px; }
+  height: 200px;
+  margin-bottom: 10px;
+  background-color: #000;
+  background-image: url("../img/icon/camera.png");
+  background-position: center;
+  background-size: 80px 70px;
+  background-repeat: no-repeat; }
   .party-create .banner img {
     width: 100%;
     height: 100%; }
@@ -9975,6 +10006,11 @@ a.button {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   padding: 10px; }
+  .party-create .filter-item .content .range-label {
+    text-align: center; }
+  .party-create .filter-item .content .range input {
+    margin-left: 0px;
+    margin-right: 0px; }
 
 .party-create .filter-item ui-multi-range {
   -webkit-box-flex: 1;
@@ -10212,6 +10248,11 @@ a.button {
     left: 70px;
     font-size: 16px;
     color: #9b9b9b; }
+  .myprofile-view .account .bio {
+    position: absolute;
+    top: 50px;
+    font-size: 14px;
+    color: #9b9b9b; }
 
 .myprofile-view .rediger {
   position: absolute;
@@ -10219,6 +10260,9 @@ a.button {
   right: 16px; }
   .myprofile-view .rediger .button {
     width: 70px; }
+
+.myprofile-view .button-bar {
+  padding: 10px; }
 
 .myprofile-view .info-item {
   padding: 20px 16px; }
@@ -10323,6 +10367,11 @@ a.button {
       width: 100%;
       height: 100%;
       border-radius: 50%; }
+
+.editprofile-view .item-input {
+  padding: 10px 16px 10px 16px; }
+  .editprofile-view .item-input input {
+    margin-left: 6px; }
 
 .premier-view .premier-list {
   width: 100%;
@@ -10625,13 +10674,26 @@ a.button {
       overflow: hidden;
       text-overflow: ellipsis; }
 
-.filter-view .filter-item .title {
-  padding: 10px; }
-
-.filter-view .filter-item .content {
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  padding: 10px; }
+.filter-view .filter-item {
+  padding-left: 5px; }
+  .filter-view .filter-item .title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 10px;
+    background-repeat: no-repeat;
+    background-position: left center; }
+    .filter-view .filter-item .title.sex-gray {
+      background-image: url("../img/icon/sex_gray.png"); }
+  .filter-view .filter-item .content {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+    .filter-view .filter-item .content .range-label {
+      text-align: center; }
+    .filter-view .filter-item .content .range input {
+      margin-left: 0px;
+      margin-right: 0px; }
 
 .filter-view .brightness {
   -webkit-filter: brightness(0.25);

@@ -1,14 +1,35 @@
 .filter-view {
 
   .filter-item {
+    padding-left: 5px;
+
     .title {
-      padding: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 0px;
+      padding-right: 10px;
+
+      background-repeat: no-repeat;
+      background-position: left center;
+
+      &.sex-gray {
+        background-image: url('../img/icon/sex_gray.png');
+      }
     }
 
     .content {
       border-top: 1px solid #ddd;
       border-bottom: 1px solid #ddd;
       padding: 10px;
+
+      .range-label {
+        text-align: center;
+      }
+
+      .range input {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
     }
   }
 

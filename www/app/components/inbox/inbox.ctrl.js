@@ -20,6 +20,10 @@
         $state.go('chat');
       }
 
+      $scope.goMyMessage = function() {
+        
+      }
+
       $scope.messages = [
         {
           poster: {

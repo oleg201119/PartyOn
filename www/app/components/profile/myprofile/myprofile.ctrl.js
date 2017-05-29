@@ -14,6 +14,8 @@
         name: "Nina Lauritsen"
       };
 
+      $scope.partymode = 0;
+
       $scope.newParties = [
         {
           banner: "img/sample/club2.png",
@@ -59,6 +61,10 @@
           location: "1.8km unna"
         }
       ];
+
+      $scope.setPartyMode = function(mode) {
+        $scope.partymode = mode;
+      }
 
       $scope.editProfile = function() {
         $state.go('app.editprofile');

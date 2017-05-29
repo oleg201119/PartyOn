@@ -9,28 +9,64 @@
 
     function FilterCtrl($scope, $state) {
 
-      $scope.ageMin = 1;
-      $scope.ageMax = 60;
-      $scope.age = {
-        from: 18,
-        to: 50
+      $scope.filter = {
+        sex: 0,
+        distance: 50,
+
+        ageMin: 1,
+        ageMax: 80,
+        ageFrom: 18,
+        ageTo: 50,
+
+        timeMin: 0,
+        timeMax: 1439,
+        timeFrom: 600,
+        timeTo: 900,
+
+        timeDir: true,
+        pointerForTime: ''
       };
 
-      $scope.timeMin = 0;
-      $scope.timeMax = 23;
-      $scope.time = {
-        from: 2,
-        to: 4
+      $scope.optionsForTimeSlide = {
+        floor: 0,
+        ceil: 1439,
+        step: 10,
+        hidePointerLabels: true,
+        hideLimitLabels: true,
+        onChange: function(sliderId, modelValue, highValue, pointerType) {
+          // console.log('Change: modelValue: ' + modelValue + ',  ' + 'highValue: ' + highValue + ',  ' + 'pointerType: ' + pointerType);
+
+          if (pointerType != $scope.filter.pointerForTime) {
+            $scope.filter.timeDir = !$scope.filter.timeDir;
+            $scope.filter.pointerForTime = pointerType;
+          }
+        },
+        onStart: function(sliderId, modelValue, highValue, pointerType) {
+          // console.log('Start: modelValue: ' + modelValue + ',  ' + 'highValue: ' + highValue + ',  ' + 'pointerType: ' + pointerType);
+
+          $scope.filter.pointerForTime = pointerType;
+        },
+        onEnd: function(sliderId, modelValue, highValue, pointerType) {
+          // console.log('End: modelValue: ' + modelValue + ',  ' + 'highValue: ' + highValue + ',  ' + 'pointerType: ' + pointerType);
+
+          $scope.filter.pointerForTime = '';
+        }
       };
 
-      $scope.minTimeChanged = function() {
-
+      $scope.setSex = function(sex) {
+        $scope.filter.sex = sex;
       }
 
-      $scope.maxTimeChanged = function() {
+      $scope.getTimeString = function(timeVal) {
+        var minutes = timeVal % 60;
+        var hours = (timeVal - minutes) / 60;
 
+        if (hours < 10) hours = '0' + hours;
+        if (minutes < 10) minutes = '0' + minutes;
+
+        //console.log(hours + ':' + minutes);
+        return hours + ':' + minutes;
       }
-
 
       $scope.options = {
             defaultDate: "2016-08-06",

@@ -6,7 +6,7 @@
     </div>
   </ion-header-bar>
 
-  <ion-content scroll="true" class="has-header">
+  <ion-content scroll="true" class="has-header" padding="true">
     <div class="banner" ng-click="editBanner()">
       <img ng-src="{{party.banner}}">
     </div>
@@ -38,9 +38,9 @@
         <span class="title">Kjonn</span>
       </div>
       <div class="button-bar">
-        <button class="button button-small button-assertive" ng-class="{'button-outline' : party.sex != 0}" ng-click="setSex(0)">Jenter</button>
-        <button class="button button-small button-assertive" ng-class="{'button-outline' : party.sex != 1}" ng-click="setSex(1)">Gutter</button>
-        <button class="button button-small button-assertive" ng-class="{'button-outline' : party.sex != 2}" ng-click="setSex(2)">Begge</button>
+        <button class="button button-small button-assertive" ng-class="{'button-outline' : filter.sex != 0}" ng-click="setSex(0)">Jenter</button>
+        <button class="button button-small button-assertive" ng-class="{'button-outline' : filter.sex != 1}" ng-click="setSex(1)">Gutter</button>
+        <button class="button button-small button-assertive" ng-class="{'button-outline' : filter.sex != 2}" ng-click="setSex(2)">Begge</button>
       </div>
     </div>
 
@@ -58,10 +58,13 @@
         <span>Alder</span>
       </div>
       <div class="content">
+        <div class="range-label">{{filter.ageFrom}} - {{filter.ageTo}} ar</div>
         <div class="range">
-          <div class="range-label">{{party.filter.age.from}}</div>
-          <ui-multi-range ng-step="1" ng-min="party.filter.age.min" ng-max="party.filter.age.max" ng-model-min="party.filter.age.from" ng-model-max="party.filter.age.to" ng-change-min="minAgeChanged()" ng-change-max="maxAgeChanged()"></ui-multi-range>
-          <div class="range-label">{{party.filter.age.to}}</div>
+          <rzslider
+            rz-slider-model="filter.ageFrom"
+            rz-slider-high="filter.ageTo"
+            rz-slider-options="{floor: 1, ceil: 80, hidePointerLabels: true, hideLimitLabels: true, noSwitching: true}">
+          </rzslider>
         </div>
       </div>
     </div>
@@ -71,10 +74,14 @@
         <span>Tid</span>
       </div>
       <div class="content">
+        <div class="range-label" ng-if="filter.timeDir">{{getTimeString(filter.timeFrom)}} - {{getTimeString(filter.timeTo)}}</div>
+        <div class="range-label" ng-if="!filter.timeDir">{{getTimeString(filter.timeTo)}} - {{getTimeString(filter.timeFrom)}}</div>
         <div class="range">
-          <div class="range-label">{{time.from}}</div>
-          <ui-multi-range ng-step="1" ng-min="timeMin" ng-max="timeMax" ng-model-min="time.from" ng-model-max="time.to" ng-change-min="minTimeChanged()" ng-change-max="maxTimeChanged()"></ui-multi-range>
-          <div class="range-label">{{time.to}}</div>
+          <rzslider
+            rz-slider-model="filter.timeFrom"
+            rz-slider-high="filter.timeTo"
+            rz-slider-options="optionsForTimeSlide">
+          </rzslider>
         </div>
       </div>
     </div>

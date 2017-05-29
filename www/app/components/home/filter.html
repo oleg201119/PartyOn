@@ -5,17 +5,33 @@
     <button class="button button-clear button-assertive">Vis treff</button>
   </div>
 
-  <ion-content scroll="true" class="has-header">
+  <ion-content scroll="true" class="has-header" padding="true">
 
     <div class="filter-item">
-      <div class="title">
+      <div class="title sex-gray" style="padding-left: 20px;">
         <span>Jeg vil feste med</span>
       </div>
       <div class="content">
         <div class="button-bar">
-          <button class="button button-small button-assertive">Jenter</button>
-          <button class="button button-small button-outline button-assertive">Gutter</button>
-          <button class="button button-small button-outline button-assertive">Begge</button>
+          <button class="button button-small button-assertive" ng-class="{'button-outline' : filter.sex != 0}" ng-click="setSex(0)">Jenter</button>
+          <button class="button button-small button-assertive" ng-class="{'button-outline' : filter.sex != 1}" ng-click="setSex(1)">Gutter</button>
+          <button class="button button-small button-assertive" ng-class="{'button-outline' : filter.sex != 2}" ng-click="setSex(2)">Begge</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-item">
+      <div class="title">
+        <span>Alder</span>
+      </div>
+      <div class="content">
+        <div class="range-label">{{filter.ageFrom}} - {{filter.ageTo}} ar</div>
+        <div class="range">
+          <rzslider
+            rz-slider-model="filter.ageFrom"
+            rz-slider-high="filter.ageTo"
+            rz-slider-options="{floor: 1, ceil: 80, hidePointerLabels: true, hideLimitLabels: true, noSwitching: true}">
+          </rzslider>
         </div>
       </div>
     </div>
@@ -26,24 +42,10 @@
       </div>
       <div class="content">
         <div class=range-label>
-          <span class="left">Maksimal avstand</span>
-          <span class="right" style="float:right">100 km</span>
+          <div class="range-label">{{filter.distance}} km</div>
         </div>
         <div class="range">
-          <input type="range" name="distance">
-        </div>
-      </div>
-    </div>
-
-    <div class="filter-item">
-      <div class="title">
-        <span>Alder</span>
-      </div>
-      <div class="content">
-        <div class="range">
-          <div class="range-label">{{age.from}}</div>
-          <ui-multi-range ng-step="1" ng-min="ageMin" ng-max="ageMax" ng-model-min="age.from" ng-model-max="age.to" ng-change-min="minAgeChanged()" ng-change-max="maxAgeChanged()"></ui-multi-range>
-          <div class="range-label">{{age.to}}</div>
+          <rzslider rz-slider-model="filter.distance" rz-slider-options="{floor: 0, ceil: 100, showSelectionBar: true, hidePointerLabels: true, hideLimitLabels: true}"></rzslider>
         </div>
       </div>
     </div>
@@ -53,10 +55,14 @@
         <span>Tid</span>
       </div>
       <div class="content">
+        <div class="range-label" ng-if="filter.timeDir">{{getTimeString(filter.timeFrom)}} - {{getTimeString(filter.timeTo)}}</div>
+        <div class="range-label" ng-if="!filter.timeDir">{{getTimeString(filter.timeTo)}} - {{getTimeString(filter.timeFrom)}}</div>
         <div class="range">
-          <div class="range-label">{{time.from}}</div>
-          <ui-multi-range ng-step="1" ng-min="timeMin" ng-max="timeMax" ng-model-min="time.from" ng-model-max="time.to" ng-change-min="minTimeChanged()" ng-change-max="maxTimeChanged()"></ui-multi-range>
-          <div class="range-label">{{time.to}}</div>
+          <rzslider
+            rz-slider-model="filter.timeFrom"
+            rz-slider-high="filter.timeTo"
+            rz-slider-options="optionsForTimeSlide">
+          </rzslider>
         </div>
       </div>
     </div>

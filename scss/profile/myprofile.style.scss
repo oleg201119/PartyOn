@@ -30,6 +30,13 @@
       font-size: 16px;
       color: $dark;
     }
+
+    .bio {
+      position: absolute;
+      top: 50px;
+      font-size: 14px;
+      color: $dark;
+    }
   }
 
   .rediger
@@ -42,6 +49,10 @@
     {
       width: 70px;
     }
+  }
+
+  .button-bar {
+    padding: 10px;
   }
 
   .info-item {
@@ -122,7 +133,7 @@
 
       .button
       {
-        width: 70px;        
+        width: 70px;
       }
     }
 
