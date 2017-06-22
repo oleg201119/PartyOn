@@ -141,6 +141,36 @@ angular.module('partyon.routes', [])
                 }
             })
 
+            .state('app.contact', {
+                url: '/contact',
+                views: {
+                    'tab-profile': {
+                        templateUrl: 'app/components/profile/contact.html',
+                        controller: 'ContactCtrl'
+                    }
+                }
+            })
+
+            .state('app.faq', {
+                url: '/faq',
+                views: {
+                    'tab-profile': {
+                        templateUrl: 'app/components/profile/faq.html',
+                        controller: 'FaqCtrl'
+                    }
+                }
+            })
+
+            .state('app.policy', {
+                url: '/policy',
+                views: {
+                    'tab-profile': {
+                        templateUrl: 'app/components/profile/policy.html',
+                        controller: 'PolicyCtrl'
+                    }
+                }
+            })
+
             .state('party', {
                 url: '/party/:id',
                 templateUrl: 'app/components/party/party.html',

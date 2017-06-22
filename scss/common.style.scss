@@ -4,68 +4,68 @@
   .icon
   {
     margin-top: 10px;
-    width: 28px;
-    height: 24px;
+
     background-repeat: no-repeat;
+    background-size: 28px;
 
     &.icon-home-off
     {
-      background-image: url('../img/tab/home.png');
+      background-image: url('../image/tab/home-gray@3x.png');
     }
 
     &.icon-home-on
     {
-      background-image: url('../img/tab/home-active.png');
+      background-image: url('../image/tab/home-red@3x.png');
     }
 
     &.icon-notification-off
     {
-      background-image: url('../img/tab/notifications.png');
+      background-image: url('../image/tab/bell-gray@3x.png');
     }
 
     &.icon-notification-on
     {
-      background-image: url('../img/tab/notifications-active.png');
+      background-image: url('../image/tab/bell-red@3x.png');
     }
 
     &.icon-shoutout-off
     {
-      background-image: url('../img/tab/shoutout.png');
+      background-image: url('../image/tab/shout-gray@3x.png');
     }
 
     &.icon-shoutout-on
     {
-      background-image: url('../img/tab/shoutout-active.png');
+      background-image: url('../image/tab/shout-red@3x.png');
     }
 
     &.icon-create-off
     {
-      background-image: url('../img/tab/create-close.png');
+      background-image: url('../image/tab/close-red@3x.png');
     }
 
     &.icon-create-on
     {
-      background-image: url('../img/tab/create-open.png');
+      background-image: url('../image/tab/creation-gray@3x.png');
     }
 
     &.icon-inbox-off
     {
-      background-image: url('../img/tab/inbox.png');
+      background-image: url('../image/tab/inbox-gray@3x.png');
     }
 
     &.icon-inbox-on
     {
-      background-image: url('../img/tab/inbox-active.png');
+      background-image: url('../image/tab/inbox-red@3x.png');
     }
 
     &.icon-profile-off
     {
-      background-image: url('../img/tab/profile.png');
+      background-image: url('../image/tab/user-gray@3x.png');
     }
 
     &.icon-profile-on
     {
-      background-image: url('../img/tab/profile-active.png');
+      background-image: url('../image/tab/user-red@3x.png');
     }
   }
 }
@@ -73,77 +73,78 @@
 .icon
 {
   width: 28px;
-  height: 24px;
+  height: 28px;
+
   background-repeat: no-repeat;
+  background-size: 28px;
 
   &.icon-chevron
   {
-    background-image: url('../img/icon/chevron.png');
+    background-image: url('../image/icon/chevron-gray@3x.png');
     display: inline-block;
     vertical-align: middle !important;
+    background-size: 20px;
   }
 
   &.icon-profile
   {
-    background-image: url('../img/icon/profile-blue.png');
+    background-image: url('../image/icon/user-blue@3x.png');
     display: inline-block;
     vertical-align: middle !important;
   }
 
   &.icon-notification
   {
-    background-image: url('../img/icon/notifications.png');
+    background-image: url('../image/icon/bell-red@3x.png');
     display: inline-block;
     vertical-align: middle !important;
   }
 
   &.icon-shoutout
   {
-    background-image: url('../img/icon/shoutout.png');
+    background-image: url('../image/tab/shout-white@3x.png');
     display: inline-block;
     vertical-align: middle !important;
   }
 
   &.icon-cup
   {
-    background-image: url('../img/icon/cup_white.png');
+    background-image: url('../image/tab/cup-white@3x.png');
     display: inline-block;
     vertical-align: middle !important;
   }
 
   &.icon-cup-red
   {
-    background-image: url('../img/icon/cup.png');
+    background-image: url('../image/icon/cup-red@3x.png');
     display: inline-block;
     vertical-align: middle !important;
   }
 
   &.icon-date-red
   {
-    background-image: url('../img/icon/date_red.png');
+    background-image: url('../image/icon/calendar-red@3x.png');
     display: inline-block;
     vertical-align: middle !important;
-    height: 18px;
   }
 
   &.icon-sex-red
   {
-    background-image: url('../img/icon/sex_red.png');
+    background-image: url('../image/icon/sex-red@3x.png');
     display: inline-block;
     vertical-align: middle !important;
-    height: 18px;
   }
 
   &.icon-key
   {
-    background-image: url('../img/icon/key.png');
+    background-image: url('../image/icon/key-color@3x.png');
     display: inline-block;
     vertical-align: middle !important;
   }
 
   &.icon-plus-one
   {
-    background-image: url('../img/icon/plus-one.png');
+    background-image: url('../image/icon/1-green@3x.png');
     display: inline-block;
     vertical-align: middle !important;
   }
@@ -157,10 +158,9 @@
 
   &.icon-profile-red
   {
-    background-image: url('../img/icon/profile-red.png');
+    background-image: url('../image/icon/user-red@3x.png');
     display: inline-block;
     vertical-align: middle !important;
-    height: 21px;
   }
 }
 

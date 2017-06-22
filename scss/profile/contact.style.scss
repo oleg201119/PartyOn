@@ -1,0 +1,67 @@
+.contact-view {
+  ion-nav-bar
+	{
+		*
+		{
+			color: $login-color;
+
+			.buttons button::before
+			{
+				color: $login-color;
+			}
+		}
+	}
+
+	ion-header-bar
+	{
+		background-color: transparent !important;
+		background: transparent !important;
+		border: none !important;
+		background-size: 0px !important; // To remove bottom border on header
+	}
+
+  .bar-header {
+    background: transparent !important;
+  }
+
+	ion-content
+  {
+    top: 0px !important;
+		background-image: url('../image/background/bg-pattern.png') !important;
+  }
+
+  .top-content {
+    height: 50%;
+
+    .app-copy
+    {
+      text-align: center;
+      padding-bottom: 0vh;
+    }
+
+    img.app-logo
+		{
+			width: 80px;
+		}
+  }
+
+  .bottom-content {
+    height: 50%;
+
+    .col {
+      text-align: center;
+      padding-top: 0vh;
+
+      h2 {
+        color: white;
+      }
+
+      p {
+        color: white;
+      }
+    }
+
+  }
+
+
+}

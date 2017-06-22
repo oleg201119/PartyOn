@@ -79,8 +79,8 @@
         img
         {
           position: relative;
-          top: 3px;
-          height: 19px;
+          top: 2px;
+          height: 20px;
         }
 
         .span
@@ -94,7 +94,7 @@
       .time
       {
         position: absolute;
-        bottom: 10px;
+        bottom: 8px;
         right: 110px;
         width: 130px;
 
@@ -102,14 +102,14 @@
         {
           position: relative;
           top: 2px;
-          height: 14px;
+          height: 22px;
         }
 
         .span
         {
           position: absolute;
-          top: 0px;
-          left: 20px;
+          top: 2px;
+          left: 22px;
           font-size: 12px;
           color: $dark;
         }
@@ -118,7 +118,7 @@
       .location
       {
         position: absolute;
-        bottom: 10px;
+        bottom: 8px;
         right: 16px;
         width: 120px;
 
@@ -126,14 +126,14 @@
         {
           position: relative;
           top: 2px;
-          height: 14px;
+          height: 22px;
         }
 
         .span
         {
           position: absolute;
-          top: 0px;
-          left: 16px;
+          top: 2px;
+          left: 18px;
           font-size: 12px;
           color: $dark;
         }

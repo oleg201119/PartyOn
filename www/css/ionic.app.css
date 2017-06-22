@@ -9801,78 +9801,77 @@ a.button {
 
 .tab-item .icon {
   margin-top: 10px;
-  width: 28px;
-  height: 24px;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: 28px; }
   .tab-item .icon.icon-home-off {
-    background-image: url("../img/tab/home.png"); }
+    background-image: url("../image/tab/home-gray@3x.png"); }
   .tab-item .icon.icon-home-on {
-    background-image: url("../img/tab/home-active.png"); }
+    background-image: url("../image/tab/home-red@3x.png"); }
   .tab-item .icon.icon-notification-off {
-    background-image: url("../img/tab/notifications.png"); }
+    background-image: url("../image/tab/bell-gray@3x.png"); }
   .tab-item .icon.icon-notification-on {
-    background-image: url("../img/tab/notifications-active.png"); }
+    background-image: url("../image/tab/bell-red@3x.png"); }
   .tab-item .icon.icon-shoutout-off {
-    background-image: url("../img/tab/shoutout.png"); }
+    background-image: url("../image/tab/shout-gray@3x.png"); }
   .tab-item .icon.icon-shoutout-on {
-    background-image: url("../img/tab/shoutout-active.png"); }
+    background-image: url("../image/tab/shout-red@3x.png"); }
   .tab-item .icon.icon-create-off {
-    background-image: url("../img/tab/create-close.png"); }
+    background-image: url("../image/tab/close-red@3x.png"); }
   .tab-item .icon.icon-create-on {
-    background-image: url("../img/tab/create-open.png"); }
+    background-image: url("../image/tab/creation-gray@3x.png"); }
   .tab-item .icon.icon-inbox-off {
-    background-image: url("../img/tab/inbox.png"); }
+    background-image: url("../image/tab/inbox-gray@3x.png"); }
   .tab-item .icon.icon-inbox-on {
-    background-image: url("../img/tab/inbox-active.png"); }
+    background-image: url("../image/tab/inbox-red@3x.png"); }
   .tab-item .icon.icon-profile-off {
-    background-image: url("../img/tab/profile.png"); }
+    background-image: url("../image/tab/user-gray@3x.png"); }
   .tab-item .icon.icon-profile-on {
-    background-image: url("../img/tab/profile-active.png"); }
+    background-image: url("../image/tab/user-red@3x.png"); }
 
 .icon {
   width: 28px;
-  height: 24px;
-  background-repeat: no-repeat; }
+  height: 28px;
+  background-repeat: no-repeat;
+  background-size: 28px; }
   .icon.icon-chevron {
-    background-image: url("../img/icon/chevron.png");
+    background-image: url("../image/icon/chevron-gray@3x.png");
     display: inline-block;
-    vertical-align: middle !important; }
+    vertical-align: middle !important;
+    background-size: 20px; }
   .icon.icon-profile {
-    background-image: url("../img/icon/profile-blue.png");
+    background-image: url("../image/icon/user-blue@3x.png");
     display: inline-block;
     vertical-align: middle !important; }
   .icon.icon-notification {
-    background-image: url("../img/icon/notifications.png");
+    background-image: url("../image/icon/bell-red@3x.png");
     display: inline-block;
     vertical-align: middle !important; }
   .icon.icon-shoutout {
-    background-image: url("../img/icon/shoutout.png");
+    background-image: url("../image/tab/shout-white@3x.png");
     display: inline-block;
     vertical-align: middle !important; }
   .icon.icon-cup {
-    background-image: url("../img/icon/cup_white.png");
+    background-image: url("../image/tab/cup-white@3x.png");
     display: inline-block;
     vertical-align: middle !important; }
   .icon.icon-cup-red {
-    background-image: url("../img/icon/cup.png");
+    background-image: url("../image/icon/cup-red@3x.png");
     display: inline-block;
     vertical-align: middle !important; }
   .icon.icon-date-red {
-    background-image: url("../img/icon/date_red.png");
+    background-image: url("../image/icon/calendar-red@3x.png");
     display: inline-block;
-    vertical-align: middle !important;
-    height: 18px; }
+    vertical-align: middle !important; }
   .icon.icon-sex-red {
-    background-image: url("../img/icon/sex_red.png");
+    background-image: url("../image/icon/sex-red@3x.png");
     display: inline-block;
-    vertical-align: middle !important;
-    height: 18px; }
+    vertical-align: middle !important; }
   .icon.icon-key {
-    background-image: url("../img/icon/key.png");
+    background-image: url("../image/icon/key-color@3x.png");
     display: inline-block;
     vertical-align: middle !important; }
   .icon.icon-plus-one {
-    background-image: url("../img/icon/plus-one.png");
+    background-image: url("../image/icon/1-green@3x.png");
     display: inline-block;
     vertical-align: middle !important; }
   .icon.icon-star {
@@ -9880,10 +9879,9 @@ a.button {
     display: inline-block;
     vertical-align: middle !important; }
   .icon.icon-profile-red {
-    background-image: url("../img/icon/profile-red.png");
+    background-image: url("../image/icon/user-red@3x.png");
     display: inline-block;
-    vertical-align: middle !important;
-    height: 21px; }
+    vertical-align: middle !important; }
 
 .premier-icon {
   width: 40px;
@@ -9962,7 +9960,7 @@ a.button {
   height: 200px;
   margin-bottom: 10px;
   background-color: #000;
-  background-image: url("../img/icon/camera.png");
+  background-image: url("../image/icon/camera-gray.png");
   background-position: center;
   background-size: 80px 70px;
   background-repeat: no-repeat; }
@@ -9974,18 +9972,19 @@ a.button {
   padding: 10px 16px; }
   .party-create .info-item .item-header {
     background-repeat: no-repeat;
-    background-position: left center; }
+    background-position: left center;
+    background-size: 22px; }
     .party-create .info-item .item-header span.title {
       margin-left: 25px;
       color: #9b9b9b; }
     .party-create .info-item .item-header.party {
-      background-image: url("../img/icon/party.png"); }
+      background-image: url("../image/icon/party-gray@3x.png"); }
     .party-create .info-item .item-header.hammer {
-      background-image: url("../img/icon/hammer.png"); }
+      background-image: url("../image/icon/hammer-gray@3x.png"); }
     .party-create .info-item .item-header.sex-gray {
-      background-image: url("../img/icon/sex_gray.png"); }
+      background-image: url("../image/icon/sex-gray@3x.png"); }
     .party-create .info-item .item-header.geo-gray {
-      background-image: url("../img/icon/geo_gray.png"); }
+      background-image: url("../image/icon/pin-gray@3x.png"); }
   .party-create .info-item input {
     width: 100%; }
   .party-create .info-item textarea {
@@ -10072,7 +10071,7 @@ a.button {
 
 .login-view ion-content {
   top: 0px !important;
-  background-image: url("../img/background/login-bg.png") !important; }
+  background-image: url("../image/background/bg-pattern.png") !important; }
 
 .login-view .multi-bg-outer {
   z-index: 0; }
@@ -10127,77 +10126,77 @@ a.button {
       font-weight: 600;
       color: #fff; }
 
-.feed-view .party-item {
+.party-list .party-item {
   position: relative;
   width: 100%;
   height: 245px;
   margin-bottom: 2px;
   overflow: hidden; }
-  .feed-view .party-item .banner {
+  .party-list .party-item .banner {
     position: absolute;
     width: 100%;
     height: 100%; }
-    .feed-view .party-item .banner img {
+    .party-list .party-item .banner img {
       width: 100%;
       height: 100%; }
-  .feed-view .party-item .poster {
+  .party-list .party-item .poster {
     position: relative;
     top: 16px;
     left: 16px; }
-    .feed-view .party-item .poster .avatar {
+    .party-list .party-item .poster .avatar {
       position: absolute;
       width: 32px;
       height: 32px;
       border-radius: 50%;
       background-color: #fff; }
-      .feed-view .party-item .poster .avatar img {
+      .party-list .party-item .poster .avatar img {
         width: 100%;
         height: 100%;
         border-radius: 50%; }
-    .feed-view .party-item .poster .name {
+    .party-list .party-item .poster .name {
       position: absolute;
       top: 5px;
       left: 50px;
       color: #fff; }
-  .feed-view .party-item .cancel {
+  .party-list .party-item .cancel {
     position: absolute;
     top: 16px;
     right: 16px; }
-    .feed-view .party-item .cancel .button {
+    .party-list .party-item .cancel .button {
       width: 70px;
       border-radius: 15px; }
-  .feed-view .party-item .info {
+  .party-list .party-item .info {
     position: absolute;
     bottom: 80px;
     width: 100%;
     color: #fff; }
-    .feed-view .party-item .info .time {
+    .party-list .party-item .info .time {
       position: absolute;
       top: 0px;
       left: 16px;
       width: 120px; }
-      .feed-view .party-item .info .time img {
+      .party-list .party-item .info .time img {
         position: relative;
-        top: 2px;
-        height: 14px; }
-      .feed-view .party-item .info .time .span {
-        position: absolute;
         top: 0px;
-        left: 20px; }
-    .feed-view .party-item .info .location {
+        height: 22px; }
+      .party-list .party-item .info .time .span {
+        position: absolute;
+        top: 1px;
+        left: 22px; }
+    .party-list .party-item .info .location {
       position: absolute;
       top: 0px;
       left: 150px;
       width: 120px; }
-      .feed-view .party-item .info .location img {
+      .party-list .party-item .info .location img {
         position: relative;
-        top: 2px;
-        height: 14px; }
-      .feed-view .party-item .info .location .span {
-        position: absolute;
         top: 0px;
-        left: 20px; }
-    .feed-view .party-item .info .description {
+        height: 22px; }
+      .party-list .party-item .info .location .span {
+        position: absolute;
+        top: 1px;
+        left: 22px; }
+    .party-list .party-item .info .description {
       position: absolute;
       top: 30px;
       padding: 0px 16px;
@@ -10226,7 +10225,9 @@ a.button {
     border-color: #fff; }
 
 .profile-view .item .icon {
-  margin-top: 15px; }
+  margin-top: 12px; }
+  .profile-view .item .icon.icon-chevron {
+    margin-top: 16px; }
 
 .myprofile-view .account {
   position: relative;
@@ -10268,12 +10269,13 @@ a.button {
   padding: 20px 16px; }
   .myprofile-view .info-item .item-header {
     background-repeat: no-repeat;
-    background-position: left center; }
+    background-position: left center;
+    background-size: 22px; }
     .myprofile-view .info-item .item-header span.title {
       margin-left: 25px;
       color: #9b9b9b; }
     .myprofile-view .info-item .item-header.party {
-      background-image: url("../img/icon/party.png"); }
+      background-image: url("../image/icon/party-gray@3x.png"); }
 
 .myprofile-view .party-item {
   position: relative;
@@ -10325,12 +10327,12 @@ a.button {
       width: 120px; }
       .myprofile-view .party-item .info .time img {
         position: relative;
-        top: 2px;
-        height: 14px; }
+        top: 0px;
+        height: 22px; }
       .myprofile-view .party-item .info .time .span {
         position: absolute;
-        top: 0px;
-        left: 20px; }
+        top: 1px;
+        left: 22px; }
     .myprofile-view .party-item .info .location {
       position: absolute;
       top: 0px;
@@ -10338,12 +10340,12 @@ a.button {
       width: 120px; }
       .myprofile-view .party-item .info .location img {
         position: relative;
-        top: 2px;
-        height: 14px; }
+        top: 0px;
+        height: 22px; }
       .myprofile-view .party-item .info .location .span {
         position: absolute;
-        top: 0px;
-        left: 20px; }
+        top: 1px;
+        left: 22px; }
     .myprofile-view .party-item .info .description {
       position: absolute;
       top: 30px;
@@ -10479,6 +10481,72 @@ a.button {
         left: 16px;
         font-size: 12px;
         color: #9b9b9b; }
+
+.contact-view ion-nav-bar * {
+  color: #fff; }
+  .contact-view ion-nav-bar * .buttons button::before {
+    color: #fff; }
+
+.contact-view ion-header-bar {
+  background-color: transparent !important;
+  background: transparent !important;
+  border: none !important;
+  background-size: 0px !important; }
+
+.contact-view .bar-header {
+  background: transparent !important; }
+
+.contact-view ion-content {
+  top: 0px !important;
+  background-image: url("../image/background/bg-pattern.png") !important; }
+
+.contact-view .top-content {
+  height: 50%; }
+  .contact-view .top-content .app-copy {
+    text-align: center;
+    padding-bottom: 0vh; }
+  .contact-view .top-content img.app-logo {
+    width: 80px; }
+
+.contact-view .bottom-content {
+  height: 50%; }
+  .contact-view .bottom-content .col {
+    text-align: center;
+    padding-top: 0vh; }
+    .contact-view .bottom-content .col h2 {
+      color: white; }
+    .contact-view .bottom-content .col p {
+      color: white; }
+
+.faq-view .item-expand {
+  position: relative;
+  width: 100%;
+  max-height: 60px;
+  transition: max-height 0.1s ease-out;
+  overflow: hidden; }
+
+.faq-view .item-expand.inactive:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  height: 15px;
+  width: 100%;
+  display: block;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0)), color-stop(1, white));
+  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+  background-image: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 100%);
+  background-image: -ms-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%); }
+
+.faq-view .item-expand.active {
+  max-height: 200px;
+  transition: max-height 0.3s ease-out; }
+
+.policy-view h2 {
+  font-size: 16px;
+  font-weight: 500; }
 
 .chat-view .bar-footer {
   overflow: visible !important; }
@@ -10681,16 +10749,20 @@ a.button {
     padding-bottom: 10px;
     padding-left: 0px;
     padding-right: 10px;
+    color: #9B9B9B;
+    font-weight: 500;
     background-repeat: no-repeat;
     background-position: left center; }
     .filter-view .filter-item .title.sex-gray {
-      background-image: url("../img/icon/sex_gray.png"); }
+      background-image: url("../image/icon/sex-gray@3x.png");
+      background-size: 18px; }
   .filter-view .filter-item .content {
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     padding: 10px; }
     .filter-view .filter-item .content .range-label {
-      text-align: center; }
+      text-align: center;
+      color: #07213F; }
     .filter-view .filter-item .content .range input {
       margin-left: 0px;
       margin-right: 0px; }
@@ -10717,45 +10789,6 @@ a.button {
   .filter-view .flex-calendar .days .day.disabled .number {
     background-color: transparent;
     background-image: none; }
-
-.filter-view ui-multi-range {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -moz-box-flex: 1;
-  -moz-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  position: relative;
-  height: 50px; }
-  .filter-view ui-multi-range input[type=range] {
-    position: absolute;
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 0 2px;
-    overflow: hidden;
-    border: 0;
-    border-radius: 1px;
-    outline: none;
-    pointer-events: none; }
-    .filter-view ui-multi-range input[type=range]:active, .filter-view ui-multi-range input[type=range]:focus {
-      outline: none; }
-    .filter-view ui-multi-range input[type=range]::-webkit-slider-thumb {
-      position: relative;
-      cursor: pointer;
-      pointer-events: all; }
-      .filter-view ui-multi-range input[type=range]::-webkit-slider-thumb::before {
-        content: ' ';
-        display: block;
-        position: absolute;
-        top: 13px;
-        left: 100%;
-        width: 2000px;
-        height: 2px; }
-    .filter-view ui-multi-range input[type=range]:nth-child(2) {
-      background: none; }
-      .filter-view ui-multi-range input[type=range]:nth-child(2)::-webkit-slider-thumb::before {
-        background-color: #ccc; }
 
 .inbox-view .list {
   padding-top: 0px; }
@@ -10814,39 +10847,39 @@ a.button {
       width: 120px; }
       .shoutouts-view .shoutout-item .info .like img {
         position: relative;
-        top: 3px;
-        height: 19px; }
+        top: 2px;
+        height: 20px; }
       .shoutouts-view .shoutout-item .info .like .span {
         position: absolute;
         top: 2px;
         left: 30px; }
     .shoutouts-view .shoutout-item .info .time {
       position: absolute;
-      bottom: 10px;
+      bottom: 8px;
       right: 110px;
       width: 130px; }
       .shoutouts-view .shoutout-item .info .time img {
         position: relative;
         top: 2px;
-        height: 14px; }
+        height: 22px; }
       .shoutouts-view .shoutout-item .info .time .span {
         position: absolute;
-        top: 0px;
-        left: 20px;
+        top: 2px;
+        left: 22px;
         font-size: 12px;
         color: #9b9b9b; }
     .shoutouts-view .shoutout-item .info .location {
       position: absolute;
-      bottom: 10px;
+      bottom: 8px;
       right: 16px;
       width: 120px; }
       .shoutouts-view .shoutout-item .info .location img {
         position: relative;
         top: 2px;
-        height: 14px; }
+        height: 22px; }
       .shoutouts-view .shoutout-item .info .location .span {
         position: absolute;
-        top: 0px;
-        left: 16px;
+        top: 2px;
+        left: 18px;
         font-size: 12px;
         color: #9b9b9b; }

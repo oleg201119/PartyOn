@@ -1,0 +1,20 @@
+<ion-view class="faq-view">
+  <div class="bar bar-header">
+    <button class="button button-clear button-assertive icon ion-arrow-left-c" ng-click="$ionicGoBack()"></button>
+    <h1 class="title">FAQs</h1>
+  </div>
+  <ion-content scroll="true" class="has-header">
+    <ion-list>
+      <ion-item ng-repeat="item in items" class="item item-text-wrap">
+        <div ng-class="isItemShown(item) ? 'item-expand active' : 'item-expand inactive'">
+          <h2>{{ item.title }}</h2>
+          <p>{{ item.text }}</p>
+        </div>
+        <div ng-click="toggleItem(item)" class="item-expand-footer">
+          <i ng-class="isItemShown(item) ? 'ion-ios-minus-outline' : 'ion-ios-plus-outline'"></i>
+            {{ isGroupShown(item) ? 'Less' : 'More' }}
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

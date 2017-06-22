@@ -7,7 +7,7 @@
     margin-bottom: 10px;
 
     background-color: #000;
-    background-image: url('../img/icon/camera.png');
+    background-image: url('../image/icon/camera-gray.png');
     background-position: center;
     background-size: 80px 70px;
     background-repeat: no-repeat;
@@ -30,21 +30,22 @@
 
       background-repeat: no-repeat;
       background-position: left center;
+      background-size: 22px;
 
       &.party {
-        background-image: url('../img/icon/party.png');
+        background-image: url('../image/icon/party-gray@3x.png');
       }
 
       &.hammer {
-        background-image: url('../img/icon/hammer.png');
+        background-image: url('../image/icon/hammer-gray@3x.png');
       }
 
       &.sex-gray {
-        background-image: url('../img/icon/sex_gray.png');
+        background-image: url('../image/icon/sex-gray@3x.png');
       }
 
       &.geo-gray {
-        background-image: url('../img/icon/geo_gray.png');
+        background-image: url('../image/icon/pin-gray@3x.png');
       }
     }
 

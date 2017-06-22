@@ -25,14 +25,22 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "scss/base/create-menu.style";
 @import "scss/base/party-create.style";
 @import "scss/base/shoutout-create.style";
+
 @import "scss/auth/login.style";
+@import "scss/party/partylist.style";
 @import "scss/feed/feed.style";
+
 @import "scss/notification/notification.style";
+
 @import "scss/profile/profile.style";
 @import "scss/profile/myprofile.style";
 @import "scss/profile/editprofile.style";
 @import "scss/profile/premier.style";
 @import "scss/profile/vote.style";
+@import "scss/profile/contact.style";
+@import "scss/profile/faq.style";
+@import "scss/profile/policy.style";
+
 @import "scss/chat/chat.style";
 @import "scss/party/party.style";
 @import "scss/party/simpleparty.style";
