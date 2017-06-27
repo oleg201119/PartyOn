@@ -7,6 +7,8 @@
         "cordova-plugin-camera": "^2.4.1",
         "cordova-plugin-compat": "^1.1.0",
         "cordova-plugin-contacts": "^2.3.1",
+        "cordova-plugin-file": "^4.0.0",
+        "cordova-plugin-file-transfer": "^1.6.3",
         "cordova-plugin-geolocation": "^2.4.3",
         "cordova-plugin-x-socialsharing": "git+https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git",
         "es6-promise-plugin": "^4.1.0",
@@ -40,7 +42,8 @@
             "phonegap-facebook-plugin": {
                 "APP_ID": "1668180459877229",
                 "APP_NAME": "Party On"
-            }
+            },
+            "cordova-plugin-file-transfer": {}
         },
         "platforms": [
             "browser"

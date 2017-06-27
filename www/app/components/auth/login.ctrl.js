@@ -5,9 +5,9 @@
         .module('partyon.auth')
         .controller('LoginCtrl', LoginCtrl);
 
-    LoginCtrl.$inject = ['$scope', '$state', '$ionicLoading', '$q'];
+    LoginCtrl.$inject = ['$scope', '$state', '$ionicLoading', '$q', 'User'];
 
-    function LoginCtrl($scope, $state, $ionicLoading, $q) {
+    function LoginCtrl($scope, $state, $ionicLoading, $q, User) {
 
       // This is the fail callback from the login method
       var fbLoginSuccess = function(response) {
@@ -18,25 +18,32 @@
 
         var authResponse = response.authResponse;
 
-        getFacebookProfileInfo(authResponse)
-        .then(function(profileInfo) {
-          console.log("=== FB profile info ===");
-          console.log(profileInfo);
-          // For the purpose of this example I will store user data on local storage
-          // UserService.setUser({
-          //   authResponse: authResponse,
-    			// 	userID: profileInfo.id,
-    			// 	name: profileInfo.name,
-    			// 	email: profileInfo.email,
-          //   picture : "http://graph.facebook.com/" + authResponse.userID + "/picture?type=large"
-          // });
+        getFacebookProfileInfo(authResponse).then(
+          function(profileInfo) {
+            console.log("=== FB profile info ===");
+            console.log(profileInfo);
 
-          $ionicLoading.hide();
-          $state.go('app.feed');
-        }, function(fail){
+            var facebook_id = profileInfo.id ? profileInfo.id:'';
+            var facebook_name = profileInfo.name ? profileInfo.name:'';
+            var facebook_email = profileInfo.email ? profileInfo.email:'';
+            var facebook_birthday = profileInfo.birthday ? profileInfo.birthday:'';
+            var facebook_gender = profileInfo.gender ? profileInfo.gender:'';
+            var facebook_avatar = "http://graph.facebook.com/" + authResponse.userID + "/picture?type=large";
+
+            User.setUser(facebook_id, facebook_name, facebook_email, facebook_birthday, facebook_gender, facebook_avatar).then(
+              function(data) {
+                $ionicLoading.hide();
+                $state.go('app.feed');
+              },
+              function(error) {
+                $ionicLoading.hide();
+              }
+            );
+          }, function(fail) {
           // Fail get profile info
           console.log('profile info fail', fail);
-        });
+          }
+        );
       };
 
       var fbLoginError = function(error) {
@@ -47,7 +54,8 @@
       var getFacebookProfileInfo = function (authResponse) {
         var info = $q.defer();
 
-        facebookConnectPlugin.api('/me?fields=id,name,email,birthday,gender&access_token=' + authResponse.accessToken, null,
+        var userId = authResponse.userID;
+        facebookConnectPlugin.api(userId + '/?fields=id,name,email,birthday,gender', ['public_profile', 'email', 'user_birthday'],
           function (response) {
     				console.log(response);
             info.resolve(response);
@@ -61,27 +69,60 @@
       };
 
       $scope.facebookSignIn = function() {
-        console.log("doing facebook sign in");
+        console.log("Doing facebook sign in");
 
         facebookConnectPlugin.getLoginStatus(function(success) {
 
           if(success.status === 'connected') {
-             console.log('getLoginStatus', success.status);
+             console.log('FB getLoginStatus', success.status);
+
+             $ionicLoading.show({
+               template: 'Logging in...'
+             });
+
+             var authResponse = success.authResponse;
+
+             getFacebookProfileInfo(authResponse).then(
+               function(profileInfo) {
+                 console.log("=== FB profile info ===");
+                 console.log(profileInfo);
+
+                 var facebook_id = profileInfo.id ? profileInfo.id:'';
+                 var facebook_name = profileInfo.name ? profileInfo.name:'';
+                 var facebook_email = profileInfo.email ? profileInfo.email:'';
+                 var facebook_birthday = profileInfo.birthday ? profileInfo.birthday:'';
+                 var facebook_gender = profileInfo.gender ? profileInfo.gender:'';
+                 var facebook_avatar = "http://graph.facebook.com/" + authResponse.userID + "/picture?type=large";
+
+                 User.setUser(facebook_id, facebook_name, facebook_email, facebook_birthday, facebook_gender, facebook_avatar).then(
+                   function(data) {
+                     $ionicLoading.hide();
+                     $state.go('app.feed');
+                   },
+                   function(error) {
+                     $ionicLoading.hide();
+                   }
+                 );
+               }, function(fail) {
+                 // Fail get profile info
+                 console.log('profile info fail', fail);
+               }
+             );
           }
           else {
-            console.log('getLoginStatus', success.status);
+            console.log('FB getLoginStatus', success.status);
 
             $ionicLoading.show({
               template: 'Logging in...'
             });
 
-            facebookConnectPlugin.login(['email', 'public_profile'], fbLoginSuccess, fbLoginError);
+            facebookConnectPlugin.login(['email', 'public_profile', 'user_birthday'], fbLoginSuccess, fbLoginError);
           }
 
         }, function(err) {
           console.log(err);
         });
-        //$state.go('app.feed');
       }
+
     }
 })();

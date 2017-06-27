@@ -81,4 +81,5 @@
         <variable name="APP_ID" value="1668180459877229" />
         <variable name="APP_NAME" value="Party On" />
     </plugin>
+    <plugin name="cordova-plugin-file-transfer" spec="^1.6.3" />
 </widget>

@@ -9,6 +9,7 @@ angular.module('partyon', [
 
   'partyon.routes',
   'partyon.directives',
+  'partyon.config',
 
   'partyon.tabs',
   'partyon.auth',
@@ -26,7 +27,9 @@ angular.module('partyon', [
   'flexcalendar',
   'rzModule'
 ])
-
+.constant('$ionicLoadingConfig', {
+  template: '<ion-spinner icon="bubbles"></ion-spinner>'
+})
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -42,7 +45,7 @@ angular.module('partyon', [
 
     // Facebook init for browser mode
     if ($ionicPlatform.is('win32')) {
-        facebookConnectPlugin.browserInit(1668180459877229);  //replace with ur app id
+        facebookConnectPlugin.browserInit(1668180459877229, 'v2.4');  //replace with ur app id
     }
 
   });
