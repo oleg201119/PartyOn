@@ -21,7 +21,8 @@
           mediaType: Camera.MediaType.PICTURE,
           allowEdit: true,
           targetWidth: 375,
-          targetHeight: 245
+          targetHeight: 245,
+          correctOrientation: true
         }).then(function(imageURI) {
           q.resolve(imageURI);
         }, function(err) {

@@ -45,7 +45,7 @@ angular.module('partyon', [
 
     // Facebook init for browser mode
     if ($ionicPlatform.is('win32')) {
-        facebookConnectPlugin.browserInit(1668180459877229, 'v2.4');  //replace with ur app id
+        facebookConnectPlugin.browserInit(1668180459877229);  //replace with ur app id
     }
 
   });

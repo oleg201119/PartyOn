@@ -122,7 +122,7 @@
       }
 
       $scope.editBanner = function() {
-
+        console.log('Edit Banner');
       }
 
       $scope.setSex = function(sex) {
