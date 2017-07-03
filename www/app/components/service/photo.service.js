@@ -38,10 +38,10 @@
         var q = $q.defer();
 
         // test
-
+/*
         q.resolve('image/sample/club.png');
         return q.promise;
-
+*/
 
         // Open Gallery
         $cordovaCamera.getPicture({
