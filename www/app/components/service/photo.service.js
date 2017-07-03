@@ -24,8 +24,10 @@
           targetHeight: 245,
           correctOrientation: true
         }).then(function(imageURI) {
+          console.log(imageURI);
           q.resolve(imageURI);
         }, function(err) {
+          console.log(err);
           q.reject(err);
         });
 
@@ -37,7 +39,7 @@
 
         // test
 
-        q.resolve('img/sample/club.png');
+        q.resolve('image/sample/club.png');
         return q.promise;
 
 
@@ -50,8 +52,10 @@
           targetWidth: 375,
           targetHeight: 245
         }).then(function(imageURI) {
+          console.log(imageURI);
           q.resolve(imageURI);
         }, function(err) {
+          console.log(err);
           q.reject(err);
         });
 

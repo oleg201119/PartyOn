@@ -21,10 +21,11 @@
       }
 
       $scope.goMyMessage = function() {
-        
+
       }
 
       $scope.messages = [
+        /*
         {
           poster: {
             avatar: "img/sample/selfie4.jpg",
@@ -49,6 +50,7 @@
           description: "Eirik Bjork godtok invitasjonen ",
           date: "1 week ago"
         }
+        */
       ];
     }
 })();

@@ -14,6 +14,8 @@
         name: "Nina Lauritsen"
       };
 
+      $scope.account = {};
+
       $scope.saveProfile = function() {
         // TODO
         // save profile if there is any change.

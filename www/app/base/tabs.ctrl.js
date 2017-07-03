@@ -5,9 +5,9 @@
         .module('partyon.tabs')
         .controller('TabsCtrl', TabsCtrl);
 
-    TabsCtrl.$inject = ['$scope', '$state', '$ionicModal'];
+    TabsCtrl.$inject = ['$scope', '$state', '$ionicModal', 'Photo'];
 
-    function TabsCtrl($scope, $state, $ionicModal) {
+    function TabsCtrl($scope, $state, $ionicModal, Photo) {
 
       $scope.openCreateMenu = false;
       $scope.createIcon = 'icon-create-on';
@@ -28,7 +28,9 @@
 
       // creation info for party
       $scope.party = {
-        banner: ""
+        banner: "",
+        title: "",
+        condition: ""
       };
 
       $scope.filter = {
@@ -45,8 +47,32 @@
         timeTo: 900,
 
         timeDir: true,
-        pointerForTime: ''
+        pointerForTime: '',
+
+        year: '',
+        month: '',
+        day: ''
       }
+
+      // init
+      $scope.init = function() {
+        var d = new Date();
+
+        $scope.filter.year = d.getFullYear();
+        $scope.filter.month = d.getMonth() + 1;
+        $scope.filter.day = d.getDate();
+      }
+
+      // date
+      $scope.options = {
+        dateClick: function(date) {
+          console.log(date);
+
+          $scope.filter.year = date.year;
+          $scope.filter.month = date.month;
+          $scope.filter.day = date.day;
+        }
+      };
 
       $scope.optionsForTimeSlide = {
         floor: 0,
@@ -118,11 +144,21 @@
         $scope.modalShoutout.hide();
 
         // TODO
+
+
         console.log('A party published');
       }
 
       $scope.editBanner = function() {
         console.log('Edit Banner');
+
+        Photo.chooseLibraryPhoto().then(
+          function(data) {
+            $scope.party.banner = data;
+          },
+          function(error) {
+          }
+        );
       }
 
       $scope.setSex = function(sex) {
@@ -149,5 +185,6 @@
         });
       }
 
+      $scope.init();
     }
 })();

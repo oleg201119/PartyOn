@@ -14,9 +14,12 @@
         name: "Nina Lauritsen"
       };
 
+      $scope.account = {};
+
       $scope.partymode = 0;
 
       $scope.newParties = [
+        /*
         {
           banner: "img/sample/club2.png",
           poster: {
@@ -37,9 +40,11 @@
           time: "20.00 - 02.00",
           location: "1.8km unna"
         }
+        */
       ];
 
       $scope.oldParties = [
+        /*
         {
           banner: "img/sample/club.png",
           poster: {
@@ -60,6 +65,7 @@
           time: "20.00 - 02.00",
           location: "1.8km unna"
         }
+        */
       ];
 
       $scope.setPartyMode = function(mode) {

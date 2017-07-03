@@ -10,6 +10,7 @@
     function ShoutoutsCtrl($scope, $state) {
 
       $scope.shoutouts = [
+        /*
         {
           poster: {
             avatar: "img/sample/selfie4.jpg",
@@ -40,6 +41,7 @@
           location: "1.8km unna",
           likes: 30
         }
+        */
       ];
     }
 })();

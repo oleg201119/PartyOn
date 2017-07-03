@@ -10,6 +10,7 @@
     function PremierCtrl($scope, $state) {
 
       $scope.premiers = [
+        /*
         {
           type: 1,
           mark: "img/premier/hosted-1-party.png",
@@ -35,6 +36,7 @@
           mark: "img/premier/number-1-party.png",
           description: "Number one<br>party host"
         }
+        */
       ];
     }
 })();

@@ -44,7 +44,7 @@ angular.module('partyon', [
     }
 
     // Facebook init for browser mode
-    if ($ionicPlatform.is('win32')) {
+    if (window.cordova.platformId == "browser") {
         facebookConnectPlugin.browserInit(1668180459877229);  //replace with ur app id
     }
 

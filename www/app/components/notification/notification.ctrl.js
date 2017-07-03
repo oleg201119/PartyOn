@@ -10,6 +10,7 @@
     function NotificationCtrl($scope, $state) {
 
       $scope.notifications = [
+        /*
         {
           invitation: false,
           poster: {
@@ -34,6 +35,7 @@
           },
           description: "Eirik Bjork godtok invitasjonen "
         }
+        */
       ];
     }
 })();

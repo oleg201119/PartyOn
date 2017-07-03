@@ -11,7 +11,7 @@
 
       // This is the fail callback from the login method
       var fbLoginSuccess = function(response) {
-        if (!response.authResponse){
+        if (!response.authResponse) {
           fbLoginError("Cannot find the authResponse");
           return;
         }
@@ -124,5 +124,33 @@
         });
       }
 
+      // Facebook logout
+      $scope.fbLogout = function() {
+
+        facebookConnectPlugin.logout(
+          function(response) {
+            console.log(JSON.stringify(response));
+            User.logout().then(
+              function(data) {
+                $state.go('login');
+              },
+              function(error) {
+                $state.go('login');
+              }
+            );
+          },
+          function(err) {
+            console.log(JSON.stringify(err));
+            User.logout().then(
+              function(data) {
+                $state.go('login');
+              },
+              function(error) {
+                $state.go('login');
+              }
+            );
+          }
+        );
+      };
     }
 })();

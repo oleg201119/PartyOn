@@ -10,6 +10,7 @@
     function InviteCtrl($scope, $state) {
 
       $scope.parties = [
+        /*
         {
           banner: "img/sample/club.png",
           poster: {
@@ -40,6 +41,7 @@
           time: "20.00 - 02.00",
           location: "1.8km unna"
         }
+        */
       ];
 
       $scope.selectParty = function() {
